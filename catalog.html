@@ -5,48 +5,47 @@
     <title>HTML Academy: Нёрдс</title>
   </head>
   <body>
-
     <header class="main-header">
-      <nav class="main-navigation">
-        <!--logo (это ведь ссылка или это ссылка на странице Магазина???а тут просто картинка???)-->
+      <div class="main-header-logo">
         <a class="main-header-logo" href="index.html">
           <img src="http://placehold.it" width="368" height="153" alt="Логотип Nerds">
         </a>
+      </div>
+      <nav class="main-navigation">
         <ul class="site-navigation">
-        <li><a href="studio.html">Студия</a></li>
-        <li><a href="customers.html">Клиенты</a></li>
-        <li><a href="catalog.html">Магазин</a></li>
-        <li><a href="contacts">Контакты</a></li>
+          <li>
+            <a href="studio.html">Студия</a>
+          </li>
+          <li>
+            <a href="customers.html">Клиенты</a>
+          </li>
+          <li>
+            <a href="catalog.html">Магазин</a>
+          </li>
+          <li>
+            <a href="contacts">Контакты</a>
+          </li>
         </ul>
-        <!--shopping bag -->
-        <img src="http://placehold.it" width="368" height="153" alt="Корзина">
-        <div class="shopping-bag">
-          <a href="shopping-bag.html">Корзина</a>
-          </div> <!--span???-->
       </nav>
+      <div class="shopping-bag">
+        <a href="shopping-bag.html">Корзина</a>
+      </div>
     </header>
     <main class="container">
       <h1 class="h1-main">Магазин готовых шаблонов</h1>
       <!--RED-->
-      <section class="catalog">
-        <ul class="catalog"> <!--Должны ли это быть не просто картинки, а именно ссылки?-->
-          <li><img src="http://placehold.it" width="368" height="153" alt="Sedona"></li>
-          <li><img src="http://placehold.it" width="368" height="153" alt="Pink"></li>
-          <li><img src="http://placehold.it" width="368" height="153" alt="Borodinski"></li>
-          <li><img src="http://placehold.it" width="368" height="153" alt="Mishka"></li>
-          <li><img src="http://placehold.it" width="368" height="153" alt="Study"></li>
-          <li><img src="http://placehold.it" width="368" height="153" alt="Kваст"></li>
-        </ul>
-        <div>
-          <p>Сетка</p>
+      <section class="catalog-filter">
+        <div class="filter-button">
+          <div class="filter">
+            <p>Сетка</p>
             <ul class="filter">
-              <li>Адаптивная</li>
-              <li>Фиксированная</li>
-              <li>Резиновая</li>
-            </ul>
-        </div>
-        <div>
-          <p>Особенности</p>
+                <li>Адаптивная</li>
+                <li>Фиксированная</li>
+                <li>Резиновая</li>
+              </ul>
+          </div>
+          <div class="filter">
+            <p>Особенности</p>
             <ul class="filter">
               <li>Слайдер</li>
               <li>Блок преимуществ</li>
@@ -54,27 +53,60 @@
               <li>Галерея</li>
               <li>Корзина</li>
             </ul>
+          </div>
+          <div class="showing-filter">
+            <button type="submit">Показать</button>
+          </div>
         </div>
-        <span class="showing-filter"><a href="showing-filter.html">Показать</a>
-        </span>
+        <div class="catalog">
+          <ul class="catalog">
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Sedona">
+            </li>
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Pink">
+            </li>
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Borodinski">
+            </li>
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Mishka">
+            </li>
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Study">
+            </li>
+            <li>
+              <img src="http://placehold.it" width="368" height="153" alt="Kваст">
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
-          <li><a class="social-button" href="#">Вконтакте</a></li>
-          <li><a class="social-button" href="#">Фейсбук</a></li>
-          <li><a class="social-button" href="#">Инстаграм</a></li>
+          <li>
+            <a class="social-button" href="#">Вконтакте</a>
+          </li>
+          <li>
+            <a class="social-button" href="#">Фейсбук</a>
+          </li>
+          <li>
+            <a class="social-button" href="#">Инстаграм</a>
+          </li>
         </ul>
       </div>
-      <p>
-        <b>
-        Давайте дружить, это выгодно!
-        </b>
-      </p>
-      <b>
-        Скидка 10% для друзей из социальный сетей
-      </b>
+      <div class="discount">
+        <p>
+          <b>
+            Давайте дружить, это выгодно!
+          </b>
+        </p>
+        <p>
+          Скидка 10% для друзей из социальный сетей
+        </p>
+      </div>
     </footer>
     </body>
+
 </html>
