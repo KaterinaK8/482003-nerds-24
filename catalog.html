@@ -34,52 +34,147 @@
     <main class="container">
       <h1 class="h1-main">Магазин готовых шаблонов</h1>
       <!--RED-->
-      <section class="catalog-filter">
-        <div class="filter-button">
-          <div class="filter">
-            <p>Сетка</p>
-            <ul class="filter">
-                <li>Адаптивная</li>
-                <li>Фиксированная</li>
-                <li>Резиновая</li>
-              </ul>
-          </div>
-          <div class="filter">
-            <p>Особенности</p>
-            <ul class="filter">
-              <li>Слайдер</li>
-              <li>Блок преимуществ</li>
-              <li>Новости</li>
-              <li>Галерея</li>
-              <li>Корзина</li>
+      <section class="filter">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+          <form class="filter" method="get" action="echo.catalog.ru">
+          <fieldset>
+            <legend>Cетка:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" name="catalog-group" value="adaptive" id="adaptive" checked>
+                <label for="adaptive">Адаптивная</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" name="catalog-group" value="fixed" id="fixed">
+                <label for="fixed">Фиксированная</label>
+              </li>
+              <li class="filter-option">
+                <input class="filter-input filter-input-radio" type="radio" name="catalog-group" value="reflowable" id="reflowable">
+                <label for="reflowable">Резиновая</label>
+              </li>
             </ul>
-          </div>
-          <div class="showing-filter">
-            <button type="submit">Показать</button>
-          </div>
-        </div>
-        <div class="catalog">
-          <ul class="catalog">
-            <li>
-              <img src="img/img-sedona.jpg" width="100" height="100" alt="Sedona">
-            </li>
-            <li>
-              <img src="img/img-pink.jpg" width="100" height="100" alt="Pink">
-            </li>
-            <li>
-              <img src="img/img-barbershop.jpg" width="100" height="100" alt="Barbershop">
-            </li>
-            <li>
-              <img src="img/img-mishka.jpg" width="100" height="100" alt="Mishka">
-            </li>
-            <li>
-              <img src="img/img-aplus.jpg" width="100" height="100" alt="Aplus">
-            </li>
-            <li>
-              <img src="img/img-kvast.jpg" width="100" height="100" alt="Kvast">
-            </li>
-          </ul>
-        </div>
+          </fieldset>
+          <fieldset>
+            <legend>Особенности:</legend>
+            <ul>
+              <li class="filter-option">
+                <input class="filter-input filter-input-checkbox" type="checkbox" name="slider" id="slider" checked>
+                <label for="slider">Слайдер</label>
+                <li class="filter-option">
+                  <input class="filter-input filter-input-checkbox" type="checkbox" name="advantage-block" id="advantage-block" >
+                  <label for="advantage-block">Блок преимуществ</label>
+                </li>
+                <li class="filter-option">
+                  <input class="filter-input filter-input-checkbox" type="checkbox" name="news" id="news" checked>
+                  <label for="news">Новости</label>
+                </li>
+                <li class="filter-option">
+                  <input class="filter-input filter-input-checkbox" type="checkbox" name="gallery" id="gallery" >
+                  <label for="gallery">Галерея</label>
+                </li>
+                <li class="filter-option">
+                  <input class="filter-input filter-input-checkbox" type="checkbox" name="shopping-bag" id="shopping-bag" >
+                  <label for="shopping-bag">Корзина</label>
+                </li>
+              </li>
+            </ul>
+          </fieldset>
+           <button type="submit" class="filter-button button">Показать</button>
+        </form>
+      </section>
+      <section class="catalog">
+        <h2 class="visually-hidden">Каталог</h2>
+        <ul class="catalog">
+          <li>
+            <a href="catalog-item.html">
+              <h3 class="visually-hidden">Седона</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-sedona.jpg" width="100" height="100" alt="Sedona">
+              </p>
+            </a>
+            <div class="catalog-item-price-sedona visually-hidden">
+              <p class="catalog-item-price-sedona visually-hidden">
+                Sedona
+                <br>
+                Информационный сайт для туристов
+               <a class="button" href="#">9 900 ₽</a>
+             </p>
+           </div>
+          </li>
+          <li>
+            <a href="catalog-item.html">
+              <h3>Пинк</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-pink.jpg" width="100" height="100" alt="Pink">
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="catalog-item.html">
+              <h3>Барбершоп</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-barbershop.jpg" width="100" height="100" alt="Barbershop">
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="catalog-item.html">
+              <h3>Мишка</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-mishka.jpg" width="100" height="100" alt="Mishka">
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="catalog-item.html">
+              <h3>Аплюс</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-aplus.jpg" width="100" height="100" alt="Aplus">
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="catalog-item.html">
+              <h3>Кваст</h3>
+              <p class="catalog-item-image">
+                <img src="img/img-kvast.jpg" width="100" height="100" alt="Kvast">
+              </p>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="map">
+        <p>
+          <img scr="map.jpg" width="100" height="100" alt="Адрес">
+        </p>
+        <div class="map-popup visually-hidden">
+          <h3 class="popup">
+            Напишите нам
+          </h3>
+          <button class="popup-close" type="button">
+            Закрыть
+          </button>
+          <form class="feedback" method="post">
+            <div>
+              <label for="feedback-login">Ваше имя:</label>
+              <input id="feedback-login" type="text"
+               name="feedback-login" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label for="feedback-email">Ваш e-mail:</label>
+              <input id="feedback-email" type="text"
+               name="feedback-email" placeholder="email@example.com">
+            </div>
+            <div>
+              <label for="feedback-text">Текст письма:</label>
+              <input id="feedback-text" type="text"
+               name="feedback-text" placeholder="В свободной форме">
+            </div>
+            <button type="submit">
+              Отправить
+            </button>
+          </form>
+        </div class="map-popup">
       </section>
     </main>
     <footer class="main-footer">

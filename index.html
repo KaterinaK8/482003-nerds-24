@@ -33,8 +33,8 @@
     </header>
     <!--Red-->
     <main class="container">
-      <h1 class="h1-main">Дизайн-студия Нердс</h1>
-      <h2 class="h2-main">Услуги</h2>
+      <h1 class="visually-hidden">Дизайн-студия Нердс</h1>
+      <h2 class="visually-hidden">Услуги</h2>
       <section class="services">
         <div class="services-item">
           <img src="img/illustration-1.png" width="100" height="100" alt="Веб-сайты">
@@ -60,6 +60,39 @@
           </p>
           <a class="presentation" href="presentation.html">Заказать</a>
         </div>
+      </section>
+      <section class="map">
+        <p>
+          <img scr="map.jpg" width="100" height="100" alt="Адрес">
+        </p>
+        <div class="map-popup visually-hidden">
+          <h3 class="popup">
+            Напишите нам
+          </h3>
+          <button class="popup-close" type="button">
+            Закрыть
+          </button>
+          <form class="feedback" method="post">
+            <div>
+              <label for="feedback-login">Ваше имя:</label>
+              <input id="feedback-login" type="text"
+               name="feedback-login" placeholder="Имя Фамилия">
+            </div>
+            <div>
+              <label for="feedback-email">Ваш e-mail:</label>
+              <input id="feedback-email" type="text"
+               name="feedback-email" placeholder="email@example.com">
+            </div>
+            <div>
+              <label for="feedback-text">Текст письма:</label>
+              <input id="feedback-text" type="text"
+               name="feedback-text" placeholder="В свободной форме">
+            </div>
+            <button type="submit">
+              Отправить
+            </button>
+          </form>
+        </div class="map-popup">
       </section>
     </main>
     <footer class="main-footer">
