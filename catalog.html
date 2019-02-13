@@ -34,55 +34,55 @@
     <main class="container">
       <h1 class="h1-main">Магазин готовых шаблонов</h1>
       <!--RED-->
-      <section class="filter">
+      <section class="catalog">
+      <div class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-          <form class="filter" method="get" action="echo.catalog.ru">
-          <fieldset>
-            <legend>Cетка:</legend>
-            <ul>
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="adaptive" id="adaptive" checked>
-                <label for="adaptive">Адаптивная</label>
-              </li>
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="fixed" id="fixed">
-                <label for="fixed">Фиксированная</label>
-              </li>
-              <li class="filter-option">
-                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="reflowable" id="reflowable">
-                <label for="reflowable">Резиновая</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset>
-            <legend>Особенности:</legend>
-            <ul>
-              <li class="filter-option">
-                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="slider" id="slider" checked>
-                <label for="slider">Слайдер</label>
+        <form class="filter" method="get" action="echo.catalog.ru">
+            <fieldset>
+              <legend>Cетка:</legend>
+              <ul>
                 <li class="filter-option">
-                  <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="advantage-block" id="advantage-block" >
-                  <label for="advantage-block">Блок преимуществ</label>
+                  <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="adaptive" id="adaptive" checked>
+                  <label for="adaptive">Адаптивная</label>
                 </li>
                 <li class="filter-option">
-                  <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="news" id="news" checked>
-                  <label for="news">Новости</label>
+                  <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="fixed" id="fixed">
+                  <label for="fixed">Фиксированная</label>
                 </li>
                 <li class="filter-option">
-                  <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="gallery" id="gallery" >
-                  <label for="gallery">Галерея</label>
+                  <input class="filter-input filter-input-radio visually-hidden" type="radio" name="catalog-group" value="reflowable" id="reflowable">
+                  <label for="reflowable">Резиновая</label>
                 </li>
+              </ul>
+            </fieldset>
+            <fieldset>
+              <legend>Особенности:</legend>
+              <ul>
                 <li class="filter-option">
-                  <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="shopping-bag" id="shopping-bag" >
-                  <label for="shopping-bag">Корзина</label>
-                </li>
-
-            </ul>
-          </fieldset>
+                  <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="slider" id="slider" checked>
+                  <label for="slider">Слайдер</label>
+                  <li class="filter-option">
+                    <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="advantage-block" id="advantage-block" >
+                    <label for="advantage-block">Блок преимуществ</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="news" id="news" checked>
+                    <label for="news">Новости</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="gallery" id="gallery" >
+                    <label for="gallery">Галерея</label>
+                  </li>
+                  <li class="filter-option">
+                    <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="shopping-bag" id="shopping-bag" >
+                    <label for="shopping-bag">Корзина</label>
+                  </li>
+              </ul>
+            </fieldset>
            <button type="submit" class="filter-button button">Показать</button>
         </form>
-      </section>
-      <section class="catalog">
+      </div>
+      <div class="catalog-content">
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="catalog">
           <li>
@@ -93,12 +93,9 @@
               </p>
             </a>
             <div class="catalog-item-price-sedona visually-hidden">
-              <p class="catalog-item-price-sedona visually-hidden">
-                Sedona
-                <br>
-                Информационный сайт для туристов
-               <a class="button" href="#">9 900 ₽</a>
-             </p>
+              <p class="catalog-item-title">Sedona</p>
+              <p class="catalog-item-desc">Информационный сайт для туристов</p>
+              <a class="button" href="#">9 900 ₽</a>
            </div>
           </li>
           <li>
@@ -108,6 +105,11 @@
                 <img src="img/img-pink.jpg" width="100" height="100" alt="Pink">
               </p>
             </a>
+            <div class="catalog-item-price-pink visually-hidden">
+              <p class="catalog-item-title">Pink</p>
+              <p class="catalog-item-desc">Информац</p>
+              <a class="button" href="#">9 900 ₽</a>
+           </div>
           </li>
           <li>
             <a href="catalog-item.html">
@@ -116,6 +118,11 @@
                 <img src="img/img-barbershop.jpg" width="100" height="100" alt="Barbershop">
               </p>
             </a>
+            <div class="catalog-item-price-barbershop visually-hidden">
+              <p class="catalog-item-title">Barbershop</p>
+              <p class="catalog-item-desc">Информац</p>
+              <a class="button" href="#">9 900 ₽</a>
+           </div>
           </li>
           <li>
             <a href="catalog-item.html">
@@ -124,6 +131,11 @@
                 <img src="img/img-mishka.jpg" width="100" height="100" alt="Mishka">
               </p>
             </a>
+            <div class="catalog-item-price-mishka visually-hidden">
+              <p class="catalog-item-title">Mishka</p>
+              <p class="catalog-item-desc">Информац</p>
+              <a class="button" href="#">9 900 ₽</a>
+           </div>
           </li>
           <li>
             <a href="catalog-item.html">
@@ -132,6 +144,11 @@
                 <img src="img/img-aplus.jpg" width="100" height="100" alt="Aplus">
               </p>
             </a>
+            <div class="catalog-item-price-aplus visually-hidden">
+              <p class="catalog-item-title">Aplus</p>
+              <p class="catalog-item-desc">Информац</p>
+              <a class="button" href="#">9 900 ₽</a>
+           </div>
           </li>
           <li>
             <a href="catalog-item.html">
@@ -140,43 +157,21 @@
                 <img src="img/img-kvast.jpg" width="100" height="100" alt="Kvast">
               </p>
             </a>
+            <div class="catalog-item-price-kvast visually-hidden">
+              <p class="catalog-item-title">Kvast</p>
+              <p class="catalog-item-desc">Информаци</p>
+              <a class="button" href="#">9 900 ₽</a>
+           </div>
           </li>
         </ul>
-      </section>
-      <section class="map">
-        <p>
-          <img scr="map.jpg" width="100" height="100" alt="Адрес">
-        </p>
-        <div class="map-popup visually-hidden">
-          <h3 class="popup">
-            Напишите нам
-          </h3>
-          <button class="popup-close" type="button">
-            Закрыть
-          </button>
-          <form class="feedback" method="post">
-            <div>
-              <label for="feedback-login">Ваше имя:</label>
-              <input id="feedback-login" type="text"
-               name="feedback-login" placeholder="Имя Фамилия">
-            </div>
-            <div>
-              <label for="feedback-email">Ваш e-mail:</label>
-              <input id="feedback-email" type="text"
-               name="feedback-email" placeholder="email@example.com">
-            </div>
-            <div>
-              <label for="feedback-text">Текст письма:</label>
-              <input id="feedback-text" type="text"
-               name="feedback-text" placeholder="В свободной форме">
-            </div>
-            <button type="submit">
-              Отправить
-            </button>
-          </form>
-        </div>
-      </section>
+      </div>
+    </section>
     </main>
+    <section class="map">
+      <p>
+        <img scr="map.jpg" width="100" height="100" alt="Адрес">
+      </p>
+    </section>
     <footer class="main-footer">
       <div class="footer-social">
         <ul>
@@ -208,6 +203,33 @@
         </p>
       </div>
     </footer>
-    </body>
-
+    <div class="map-popup visually-hidden">
+      <h3 class="popup">
+        Напишите нам
+      </h3>
+      <button class="popup-close" type="button">
+        Закрыть
+      </button>
+      <form class="feedback" method="post">
+        <div>
+          <label for="feedback-login">Ваше имя:</label>
+          <input id="feedback-login" type="text"
+           name="feedback-login" placeholder="Имя Фамилия">
+        </div>
+        <div>
+          <label for="feedback-email">Ваш e-mail:</label>
+          <input id="feedback-email" type="text"
+           name="feedback-email" placeholder="email@example.com">
+        </div>
+        <div>
+          <label for="feedback-text">Текст письма:</label>
+          <input id="feedback-text" type="text"
+           name="feedback-text" placeholder="В свободной форме">
+        </div>
+        <button type="submit">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </body>
 </html>
