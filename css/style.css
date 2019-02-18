@@ -1,0 +1,132 @@
+body {
+  margin: 0; /*убирает  отступы внешние по экрану*/
+  padding: 0;/*внутренние отступы вокруг содержимого в рамке*/
+
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;/*межстрочный интервал*/
+  font-weight: normal;/*насыщенность/жирность шрифта*/
+  color: #000000;/*black*//*цвет текста*/
+  text-transform: none;/*регистр */
+
+  background-color: #ffffff;/*white*/
+}
+
+a {
+  text-decoration: none;
+}
+.main-header {
+  font-size: 16px;
+  line-height: 30px;
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: medium;
+
+  background-color: #eeeeee;/*grey*/
+}
+
+.site-navigation {
+  list-style: none;/*убирает маркеры в списке*/
+}
+
+.site-navigation a,
+.shopping-bag a {
+  color: #000000;
+}
+
+.main-navigation a:hover,
+.main-navigation a:focus,
+.shopping-bag a:hover,
+.shopping-bag a:focus {
+  color: #fb565a;
+}
+
+.main-navigation a:active,
+.shopping-bag a:active {
+  color: #a6a6a6;
+}
+.main-header-logo svg:hover,
+.main-header-logo svg:focus {
+  fill: #303030;
+}
+
+.main-header-logo svg:active {
+  fill: #a6a6a6;
+}
+
+.services-item {
+  text-align: left;/*выравнивание текста*/
+  line-height: 24px;
+}
+
+.services h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.services-item a {
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.services-item .button-red {
+  background-color: #fb565a;
+}
+
+.button-red:hover,
+.button-red:focus {
+  background-color: #e74246;
+}
+
+.button-red:active { /*??????Тут еще тень или что?????????*/
+  background-color: #d7373b;
+  color: #e37376;
+}
+
+.services-item .button-green {
+  background-color: #00ca74;
+}
+
+.button-green:hover,
+.button-green:focus {
+  background-color: #00bc6c;
+}
+
+.button-green:active {
+  background-color: #00aa62;
+  color: #4dc491;
+}
+
+.services-item .button-orange {
+  background-color: #efc84a;
+}
+
+.button-orange:hover,
+.button-orange:focus {
+  background-color: #eab534;
+}
+
+.button-orange:active {
+  background-color: #e5a722;
+  color: #edc265;
+}
+
+.make-friends {
+  font-size: 36px;
+  line-height: 36px;/*межстрочный интервал*/
+  font-weight: bold;/*насыщенность/жирность шрифта*/
+}
+
+.discount {
+  line-height: 22px;/*межстрочный интервал*/
+}
+
+
+
+
+.visually-hidden {
+  display:none;
+}
