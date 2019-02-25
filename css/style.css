@@ -10,6 +10,9 @@ body {
   text-transform: none;/*регистр */
 
   background-color: #ffffff;/*white*/
+
+  min-width: 1440px;
+  min-height: 2476px;
 }
 
 a {
@@ -33,6 +36,41 @@ a {
   font-weight: 500;
 
   background-color: #eeeeee;/*grey*/
+
+  margin-bottom: 18px;
+  width: 100%;
+  outline: 1px solid green; /*временно*/
+}
+
+.container-header {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid black; /*временно*/
+}
+
+.main-header-logo {
+  width: 160px;
+  height: 65px;
+  outline: 1px solid red; /*временно*/
+}
+
+.main-navigation {
+  width: 440px;
+ margin: 0;
+ padding: 0;
+ outline: 1px solid yellow; /*временно*/
+}
+
+.shopping-bag {
+  width: 160px;
+ margin: 0;
+ padding: 0;
+ outline: 1px solid blue; /*временно*/
 }
 
 .site-navigation {
@@ -44,17 +82,17 @@ a {
   color: #000000;
 }
 
-.main-navigation a:active,
-.shopping-bag a:active {
-  color: #000000; /*почему полупрозрачность от красного цвета?*/
-  opacity: 0.3;
-}
-
 .main-navigation a:hover,
 .main-navigation a:focus,
 .shopping-bag a:hover,
 .shopping-bag a:focus {
   color: #fb565a;
+}
+
+.main-navigation a:active,
+.shopping-bag a:active {
+  color: #000000;
+  opacity: 0.3;
 }
 
 .main-header-logo svg:hover,
@@ -66,9 +104,27 @@ a {
   opacity: 0.3;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  outline: 1px solid green; /*временно*/
+}
+
+.services {
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid blue; /*временно*/
+}
+
 .services-item {
   text-align: left;/*выравнивание текста*/
   line-height: 24px;
+
+  width: 300px;
+  outline: 1px solid pink; /*временно*/
 }
 
 .services h3 {
@@ -126,6 +182,41 @@ a {
   opacity: 0.3;
 }
 
+.map {
+  display: flex;
+  width: 100%
+  margin: 0;
+  padding: 0;
+  outline: 1px solid green; /*временно*/
+}
+
+.container-footer {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-top: 69px;
+
+  display: flex;
+  justify-content: space-between;
+
+  outline: 1px solid black; /*временно*/
+}
+
+.footer-social {
+  width: 260px;
+  margin: 0;
+  padding: 0;
+  outline: 1px solid green; /*временно*/
+}
+
+.make-friends-for-discount {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  margin-right: 200px;
+  outline: 1px solid red; /*временно*/
+}
+
 .make-friends {
   font-size: 36px;
   line-height: 36px;/*межстрочный интервал*/
@@ -142,8 +233,8 @@ a {
 
 .social-button {
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 100%;
   font-size: 0;
   background-color: #e1e1e1;
@@ -164,10 +255,17 @@ background-color: #e74246;
 
 /*CATALOG*/
 
+.inner-page .main-header {
+  padding-bottom: 57px;
+}
+
 .h1-main {
   font-size: 55px;
   line-height: 55px;/*межстрочный интервал*/
   font-weight: 500;/*насыщенность/жирность шрифта*/
+  background-color: #eeeeee;/*grey*/
+  text-transform: none;
+  text-align: center;
 }
 
 .main-navigation .current-page {
