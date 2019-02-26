@@ -50,6 +50,7 @@ a {
   display: flex;
   justify-content: space-between;
 
+
   outline: 1px solid black; /*временно*/
 }
 
@@ -190,6 +191,14 @@ a {
   outline: 1px solid green; /*временно*/
 }
 
+.main-footer {
+  width: 100%
+  padding: 0;
+  margin: 0;
+
+  outline: 1px solid pink; /*временно*/
+}
+
 .container-footer {
   width: 1200px;
   margin: 0 auto;
@@ -206,33 +215,22 @@ a {
   width: 260px;
   margin: 0;
   padding: 0;
+
   outline: 1px solid green; /*временно*/
 }
 
-.make-friends-for-discount {
-  width: 600px;
-  margin: 0;
+.footer-social-buttons {
+  display:flex;
+  justify-content: space-between;
+
   padding: 0;
-  margin-right: 200px;
-  outline: 1px solid red; /*временно*/
-}
+  margin: 0;
 
-.make-friends {
-  font-size: 36px;
-  line-height: 36px;/*межстрочный интервал*/
-  font-weight: bold;/*насыщенность/жирность шрифта*/
-}
-
-.discount {
-  line-height: 22px;/*межстрочный интервал*/
-}
-
-.footer-social-buttons{
   list-style: none;
 }
 
 .social-button {
-  display: inline-block;
+  display: inline-flex;
   width: 80px;
   height: 80px;
   border-radius: 100%;
@@ -253,10 +251,44 @@ background-color: #e74246;
   fill: #e37376;
 }
 
+.make-friends-for-discount {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  margin-right: 200px;
+  outline: 1px solid red; /*временно*/
+}
+
+.make-friends {
+  font-size: 36px;
+  line-height: 36px;/*межстрочный интервал*/
+  font-weight: bold;/*насыщенность/жирность шрифта*/
+}
+
+.discount {
+  line-height: 22px;/*межстрочный интервал*/
+}
+
 /*CATALOG*/
 
-.inner-page .main-header {
+.inner-page .container-header {
+  width: 1200px;
+  margin: 0 auto;
   padding-bottom: 57px;
+
+  display: flex;
+  flex-direction: column; /*поворот оси ц флекс элементов*/
+  justify-content: space-between;
+
+  outline: 1px solid black; /*временно*/
+}
+
+.topline-container-header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0;
+  margin: 0;
 }
 
 .h1-main {
@@ -266,11 +298,50 @@ background-color: #e74246;
   background-color: #eeeeee;/*grey*/
   text-transform: none;
   text-align: center;
+
+    outline: 1px solid blue; /*временно*/
 }
 
 .main-navigation .current-page {
   text-decoration-line: underline;
   text-decoration-color: #fb565a;
+}
+
+.catalog-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter {
+  width: 260px;
+  outline: 1px solid orange; /*временно*/
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;/*перенос на новую строку*/
+
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+}
+
+.catalog-content {
+  width: 760px;
+  outline: 1px solid purple; /*временно*/
+}
+
+.catalog-item {
+  width: 360px;
+  margin-bottom: 33px;
+  margin-right: 40px;
+
+  outline: 1px solid blue; /*временно*/
+}
+
+.catalog-item:nth-child(2n) {
+  margin-right: 0;
 }
 
 fieldset {
@@ -301,7 +372,4 @@ fieldset ul {
   text-transform: uppercase;
   text-align: center;
   background-color: #eeeeee;
-}
-.catalog {
-  list-style: none;
 }
