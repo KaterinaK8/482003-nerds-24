@@ -12,7 +12,6 @@ body {
   background-color: #ffffff;/*white*/
 
   min-width: 1440px;
-  min-height: 2476px;
 }
 
 a {
@@ -29,6 +28,7 @@ a {
 }
 
 .main-header {
+  box-sizing: border-box;
   font-size: 16px;
   line-height: 30px;
   color: #000000;
@@ -38,39 +38,36 @@ a {
   background-color: #eeeeee;/*grey*/
 
   margin-bottom: 18px;
-  width: 100%;
   outline: 1px solid green; /*временно*/
 }
 
 .container-header {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-
-
-  outline: 1px solid black; /*временно*/
 }
 
 .main-header-logo {
   width: 160px;
   height: 65px;
+
   outline: 1px solid red; /*временно*/
 }
 
 .main-navigation {
   width: 440px;
- margin: 0;
- padding: 0;
- outline: 1px solid yellow; /*временно*/
+  margin: 0;
+  padding: 0;
+
+  outline: 1px solid yellow; /*временно*/
 }
 
 .shopping-bag {
   width: 160px;
- margin: 0;
- padding: 0;
+  margin: 0;
+  padding: 0;
+  /*margin-left: auto;*/
+
  outline: 1px solid blue; /*временно*/
 }
 
@@ -107,10 +104,14 @@ a {
 
 .container {
   width: 1200px;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0 20px;
+  box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin).*/
 
   outline: 1px solid green; /*временно*/
+}
+
+.container-main {
 }
 
 .services {
@@ -185,14 +186,14 @@ a {
 
 .map {
   display: flex;
-  width: 100%
+  width: 100%;
   margin: 0;
   padding: 0;
   outline: 1px solid green; /*временно*/
 }
 
 .main-footer {
-  width: 100%
+  width: 100%;
   padding: 0;
   margin: 0;
 
@@ -200,13 +201,9 @@ a {
 }
 
 .container-footer {
-  width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
   margin-top: 69px;
 
   display: flex;
-  justify-content: space-between;
 
   outline: 1px solid black; /*временно*/
 }
@@ -255,7 +252,7 @@ background-color: #e74246;
   width: 600px;
   margin: 0;
   padding: 0;
-  margin-right: 200px;
+  margin-left: 100px;
   outline: 1px solid red; /*временно*/
 }
 
@@ -271,26 +268,6 @@ background-color: #e74246;
 
 /*CATALOG*/
 
-.inner-page .container-header {
-  width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 57px;
-
-  display: flex;
-  flex-direction: column; /*поворот оси ц флекс элементов*/
-  justify-content: space-between;
-
-  outline: 1px solid black; /*временно*/
-}
-
-.topline-container-header {
-  display: flex;
-  justify-content: space-between;
-
-  padding: 0;
-  margin: 0;
-}
-
 .h1-main {
   font-size: 55px;
   line-height: 55px;/*межстрочный интервал*/
@@ -298,8 +275,9 @@ background-color: #e74246;
   background-color: #eeeeee;/*grey*/
   text-transform: none;
   text-align: center;
+  width: 100%;
 
-    outline: 1px solid blue; /*временно*/
+  outline: 1px solid blue; /*временно*/
 }
 
 .main-navigation .current-page {
