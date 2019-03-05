@@ -18,6 +18,30 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active)/*,
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden*/ {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/*
 .visually-hidden {
   display:none;
   position: absolute;
@@ -26,6 +50,7 @@ a {
   height: 1px;
   margin: -1px;
 }
+*/
 
 .main-header {
   box-sizing: border-box;
@@ -50,14 +75,16 @@ a {
 .main-header-logo {
   width: 160px;
   height: 65px;
+  margin-top: 49px;
 
   outline: 1px solid red; /*временно*/
 }
 
 .main-navigation {
-  width: 440px;
+  max-width: 488px;/*для ужимания под контент*/
   margin: 0;
   padding: 0;
+  margin-top: 56px;
 
   outline: 1px solid yellow; /*временно*/
 }
@@ -66,18 +93,59 @@ a {
   width: 160px;
   margin: 0;
   padding: 0;
+  text-align: right;
+  margin-top: 56px;
   /*margin-left: auto;*/
 
  outline: 1px solid blue; /*временно*/
 }
 
+.shopping-bag-svg {
+  position: relative;
+}
+
+.shopping-bag-svg::before {
+  content: "";
+
+  position: absolute;
+  top: 27px;
+  left: 45px;
+
+  width: 15px;
+  height: 15px;
+
+  background-image: url("../img/svg-nerds/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+
+  /*background-color: #ff0000;*/
+}
+
 .site-navigation {
   list-style: none;/*убирает маркеры в списке*/
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .site-navigation a,
 .shopping-bag a {
   color: #000000;
+
+  display: block;
+  box-sizing: border-box;;
+
+  outline: 1px solid yellow; /*временно*/
+}
+
+.site-navigation a {
+  padding: 20px 23px;
+}
+
+.shopping-bag a {
+  padding: 20px;
+  padding-right: 0;
 }
 
 .main-navigation a:hover,
@@ -111,12 +179,10 @@ a {
   outline: 1px solid green; /*временно*/
 }
 
-.container-main {
-}
-
 .services {
   display: flex;
   justify-content: space-between;
+  width: 1100px;
 
   outline: 1px solid blue; /*временно*/
 }
@@ -134,6 +200,19 @@ a {
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
+
+  margin:0;
+  margin-top: 20px;
+
+  outline: 1px solid pink; /*временно*/
+}
+
+.services-item-text {
+  margin:0;
+  margin-top:15px;
+  padding-right: 20px;
+
+  outline: 1px solid green; /*временно*/
 }
 
 .services-item a {
@@ -237,7 +316,7 @@ a {
 
 .social-button:hover,
 .sovial-button:focus {
-background-color: #e74246;
+  background-color: #e74246;
 }
 
 .social-button:active {
@@ -252,7 +331,7 @@ background-color: #e74246;
   width: 600px;
   margin: 0;
   padding: 0;
-  margin-left: 100px;
+  margin-left: 140px;
   outline: 1px solid red; /*временно*/
 }
 
@@ -276,6 +355,11 @@ background-color: #e74246;
   text-transform: none;
   text-align: center;
   width: 100%;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 110px;
+  margin-top: 65px;
 
   outline: 1px solid blue; /*временно*/
 }
@@ -333,6 +417,8 @@ fieldset ul {
 .mesh-features {
   font-size: 18px;
   height-weight: 30px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .filter .filter-option {
