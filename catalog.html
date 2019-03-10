@@ -44,7 +44,7 @@
       <section class="catalog-columns">
       <div class="filter">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter" method="get" action="echo.catalog.ru">
+        <form class="filter-form" method="get" action="echo.catalog.ru">
           <fieldset class="filter-item  filter-mesh-price">
             <legend class="mesh-features">Стоимость:</legend>
             <div class="range-filter">
@@ -102,7 +102,9 @@
                 </li>
             </ul>
           </fieldset>
-          <button type="submit" class="filter-button button">Показать</button>
+          <button type="submit" class="filter-button button grey-button">
+            <a href="#">Показать</a>
+          </button>
         </form>
       </div>
       <div class="catalog-content">
@@ -207,11 +209,20 @@
           </li>
         </ul>
         <ul class="pagination-list">
-      <li class="pagination-item pagination-item-current"><a>1</a></li>
-      <li class="pagination-item "><a href="#">2</a></li>
-      <li class="pagination-item"><a href="#">3</a></li>
-      <li class="pagination-item"><a href="#">Cледущая</a></li>
-    </ul>
+          <li class="pagination-item pagination-item-current button">
+            <a>1</a>
+          </li>
+          </button>
+          <li class="pagination-item grey-button button">
+            <a href="#">2</a>
+          </li>
+          <li class="pagination-item grey-button button">
+            <a href="#">3</a>
+          </li>
+          <li class="pagination-item grey-button button">
+            <a href="#">Cледущая</a>
+          </li>
+        </ul>
       </div>
     </section>
     </main>

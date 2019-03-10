@@ -378,9 +378,6 @@ input[type="radio"].visually-hidden*/ {
   width: 160px;
 
   color: #ffffff;
-
-  text-transform: uppercase;
-  text-align: center;
 }
 
 .services-item .button-red {
@@ -425,11 +422,90 @@ input[type="radio"].visually-hidden*/ {
   opacity: 0.3;
 }
 
+.aboutus {
+  display: flex;
+  box-sizing: border-box;
+  /*flex-wrap: wrap;*/
+  justify-content: space-between;
+  margin-bottom: 77px;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.aboutus-text {
+  width: 660px;
+
+  padding-top: 80px;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.aboutus-text h2 {
+  font-size: 45px;
+  line-height: 45px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 31px;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.aboutus-text p {
+  margin: 0;
+  margin-bottom: 42px;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.aboutus-text h3 {
+  margin: 0;
+
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.logo-table {
+  width: 360px;
+
+  padding-top: 40px;
+  text-align: right;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  margin-bottom: 46px;
+  margin-top: 44px;
+
+  outline: 1px solid red; /*временно*/
+}
+
+.project-logo img {
+opacity: 0.2;
+  }
+
+.project-logo img:hover,
+.project-logo img:focus {
+  opacity: 1;
+}
+
+.project-logo img:active {
+  opacity: 0.1;
+}
+
 .map {
   display: flex;
   width: 100%;
   margin: 0;
   padding: 0;
+
   outline: 1px solid green; /*временно*/
 }
 
@@ -583,6 +659,10 @@ margin: auto; /*почему для выравнивания???*/
 
 /*Filter*/
 
+.filter-form {
+  padding-top: 60px;
+}
+
 fieldset ul {
   list-style: none;
 }
@@ -697,14 +777,6 @@ fieldset ul {
   opacity: 0.3; /*полупрозрачность*/
 }
 
-.filter-button {
-  line-height: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  text-align: center;
-  background-color: #eeeeee;
-}
-
 .filter-mesh-price {
   margin-bottom: 54px;
 }
@@ -750,6 +822,7 @@ fieldset ul {
   background-image: url("../img/svg-nerds/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+  opacity: 0.4;
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -764,6 +837,8 @@ fieldset ul {
   background-image: url("../img/svg-nerds/checkbox-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  opacity: 1;
 }
 
 .filter-input-radio + label::before {
@@ -778,6 +853,8 @@ fieldset ul {
   background-image: url("../img/svg-nerds/radio-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  opacity: 0.4;
 }
 
 .filter-input-radio:checked + label::before {
@@ -792,6 +869,24 @@ fieldset ul {
   background-image: url("../img/svg-nerds/radio-on.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
+
+  opacity: 0.1;
+}
+
+.filter-input-radio:disabled + label::before,
+.filter-input-checkbox:disabled + label::before {
+  opacity: 0.1;
+}
+
+.grey-button {
+  background-color: #eeeeee;
+}
+
+.filter-button a{
+  display:block;
+  width: 260px;
+
+  color: #000000;
 }
 
 .pagination-list {
@@ -810,9 +905,13 @@ fieldset ul {
 
 .pagination-item:last-child {
   margin-right: 0;
+
+  width: 260px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.pagination-item a {
+.pagination-item {
   display: block;
   padding: 15px 20px;
 
@@ -821,11 +920,19 @@ fieldset ul {
   background-color: #eeeeee;
 }
 
-/*Map*/
+.grey-button:hover,
+.grey-button:focus {
+  background-color: #dfdfdf;
+}
 
-.map {
-  width: 100%;
-  background-position: top center;
-  background-repeat: repeat;
-  background-image:  url("img/map.jpg");
+.grey-button:active {
+  background-color: #d5d5d5;
+  color: rgba(185, 185, 185, 0.3); /*прорачность не работает*/
+}
+
+.pagination-item-current {
+  background-color: #ffffff;
+
+  box-sizing: border-box;
+  border: 2px solid #dbdbdb;
 }
