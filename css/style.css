@@ -1,4 +1,5 @@
 body {
+  min-width: : 1200px; /*минимальная????*/
   margin: 0; /*убирает  отступы внешние по экрану*/
   padding: 0;/*внутренние отступы вокруг содержимого в рамке*/
 
@@ -10,8 +11,6 @@ body {
   text-transform: none;/*регистр */
 
   background-color: #ffffff;/*white*/
-
-  min-width: 1440px;
 }
 
 a {
@@ -21,6 +20,12 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+hr {
+  border: none;
+  background-color: #eeeeee;
+  height: 2px;
 }
 
 .visually-hidden:not(:focus):not(:active)/*,
@@ -41,16 +46,29 @@ input[type="radio"].visually-hidden*/ {
   overflow: hidden;
 }
 
-/*
-.visually-hidden {
-  display:none;
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin).*/
+
+  outline: 1px solid green; /*временно*/
 }
-*/
+
+.button {
+  display: inline-block;
+  padding: 17px 0;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 3px;
+  border: none;
+}
 
 .main-header {
   box-sizing: border-box;
@@ -62,7 +80,6 @@ input[type="radio"].visually-hidden*/ {
 
   background-color: #eeeeee;/*grey*/
 
-  margin-bottom: 18px;
   outline: 1px solid green; /*временно*/
 }
 
@@ -70,12 +87,13 @@ input[type="radio"].visually-hidden*/ {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top:56px;
 }
 
 .main-header-logo {
   width: 160px;
   height: 65px;
-  margin-top: 49px;
+  margin-top: -7px;
 
   outline: 1px solid red; /*временно*/
 }
@@ -84,7 +102,6 @@ input[type="radio"].visually-hidden*/ {
   max-width: 488px;/*для ужимания под контент*/
   margin: 0;
   padding: 0;
-  margin-top: 56px;
 
   outline: 1px solid yellow; /*временно*/
 }
@@ -94,7 +111,6 @@ input[type="radio"].visually-hidden*/ {
   margin: 0;
   padding: 0;
   text-align: right;
-  margin-top: 56px;
   /*margin-left: auto;*/
 
  outline: 1px solid blue; /*временно*/
@@ -170,19 +186,160 @@ input[type="radio"].visually-hidden*/ {
   opacity: 0.3;
 }
 
-.container {
-  width: 1200px;
-  margin: 0 0;
-  padding: 0 20px;
-  box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin).*/
+/*Slider*/
 
-  outline: 1px solid green; /*временно*/
+.slider {
+  position: relative;
+
+  background-color: #eeeeee;
+
+  margin-bottom: 80px;
 }
+
+.slider-controls {
+  position: absolute;
+  left: 50%;
+  bottom: 104px;
+  z-index: 100;
+
+  width: 160px;
+  height: 18px;
+
+  text-align: center;
+  font-size: 0;
+  transform: translateX(-50%);
+}
+
+.slider-controls label {
+  position: relative;
+
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  padding: 8px;
+
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-controls label::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 1;
+
+  width: 18px;
+  height: 18px;
+
+  background: #ffffff;
+
+  border-radius: 50%;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.slider-item {
+  display: none;
+  padding: 78px 0 80px 0;
+}
+
+.slider-item:nth-child(1) {
+  background-image: url("img/slide1.png");
+  background-repeat: no-repeat;
+  background-position: 93% 18px;
+}
+
+.slider-item:nth-child(2) {
+  background-image: url("img/slide2.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+}
+
+.slider-item:nth-child(3) {
+  background-image: url("img/slide3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 20px;
+}
+
+#product-1:checked ~ .slider-list .slider-item:nth-child(1) {
+  display: block;
+}
+
+#product-2:checked ~ .slider-list .slider-item:nth-child(2) {
+  display: block;
+}
+
+#product-3:checked ~ .slider-list .slider-item:nth-child(3) {
+  display: block;
+}
+
+#product-1:checked ~ .slider-controls .slider-controls-item--1::before,
+#product-2:checked ~ .slider-controls .slider-controls-item--2::before,
+#product-3:checked ~ .slider-controls .slider-controls-item--3::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  width: 4px;
+  height: 4px;
+  margin: -4px;
+  background-color: inherit;
+  border: 2px solid #c1c1c1;
+  border-radius: 50%;
+}
+
+.slider-item h3 {
+  max-width: 600px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+}
+
+.slider-item p {
+  max-width: 430px;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.slider-item-button {
+  width: 240px;
+
+  color: #ffffff;
+  background-color: #fb565a;
+}
+
+.slider-item-button:hover,
+.slider-item-button:focus {
+  background-color: #e74246;
+}
+
+.slider-item-button:active {
+  background-color: #d7373b;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+/*Slider*/
+
+/*Main*/
 
 .services {
   display: flex;
   justify-content: space-between;
   width: 1100px;
+
+  margin-bottom: 80px;
 
   outline: 1px solid blue; /*временно*/
 }
@@ -195,28 +352,33 @@ input[type="radio"].visually-hidden*/ {
   outline: 1px solid pink; /*временно*/
 }
 
+.services-img {
+  margin-bottom: 20px;
+}
+
 .services h3 {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
   text-transform: uppercase;
-
+  margin-bottom: 15px;
   margin:0;
-  margin-top: 20px;
 
   outline: 1px solid pink; /*временно*/
 }
 
 .services-item-text {
-  margin:0;
-  margin-top:15px;
   padding-right: 20px;
+  margin-bottom: 31px;
 
   outline: 1px solid green; /*временно*/
 }
 
-.services-item a {
+.button-services {
+  width: 160px;
+
   color: #ffffff;
+
   text-transform: uppercase;
   text-align: center;
 }
@@ -235,7 +397,7 @@ input[type="radio"].visually-hidden*/ {
   opacity: 0.3; /*как сделать только текст полупрозрачным?*/
 }
 
-.services-item .button-green {
+.button-green {
   background-color: #00ca74;
 }
 
@@ -249,7 +411,7 @@ input[type="radio"].visually-hidden*/ {
   opacity: 0.3;
 }
 
-.services-item .button-orange {
+.button-orange {
   background-color: #efc84a;
 }
 
@@ -323,8 +485,12 @@ input[type="radio"].visually-hidden*/ {
   background-color: #d7373b;
 }
 
+.social-button svg {
+margin: auto; /*почему для выравнивания???*/
+}
+
 .social-button svg:active {
-  fill: #e37376;
+  opacity: 0.3;
 }
 
 .make-friends-for-discount {
@@ -406,12 +572,26 @@ input[type="radio"].visually-hidden*/ {
   margin-right: 0;
 }
 
-fieldset {
-  border: none;
+.catalog-item svg:hover,
+.catalog-item svg:focus {
+  opacity: 0.12;
 }
+
+.catalog-item-image {
+  margin: 0;
+}
+
+/*Filter*/
 
 fieldset ul {
   list-style: none;
+}
+
+.filter-item {
+  margin: 0;
+  padding: 0;
+
+  border: none;
 }
 
 .mesh-features {
@@ -419,6 +599,93 @@ fieldset ul {
   height-weight: 30px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.range-filter {
+  width: 260px;
+  margin-top: 49px;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #f1f1f1;
+
+  border-radius: 5px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls .bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls .toggle {
+  position: absolute;
+  top: 31px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+  padding: 0;
+
+  border: 8px solid #ffffff;
+  background-color: #ababab;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.range-controls .toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block;
+  width: 50%;
+
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.price-controls input {
+  width: 60px;
+  padding: 8px 10px;
+  margin-left: 10px;
+
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 16px;
+  text-align: center;
+  color: #283136;
+
+  border: none;
+  border-radius: 5px;
+  background: #f1f1f1;
+}
+
+.max-price {
+  text-align: right;
 }
 
 .filter .filter-option {
@@ -436,4 +703,129 @@ fieldset ul {
   text-transform: uppercase;
   text-align: center;
   background-color: #eeeeee;
+}
+
+.filter-mesh-price {
+  margin-bottom: 54px;
+}
+
+.filter-kindofmesh {
+  margin-bottom: 45px;
+}
+
+.filter-mesh-features {
+  margin-bottom: 48px;
+}
+
+.filter ul {
+  padding: 0;
+  margin: 0;
+}
+
+.filter-option {
+  margin-bottom: 20px;
+  padding-left: 37px;
+
+  outline: 1px solid green; /*временно*/
+}
+
+.filter-option label {
+  position: relative;
+
+  display: block;
+
+  cursor: pointer;
+  user-select: none;
+}
+
+.filter-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/svg-nerds/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-checkbox:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/svg-nerds/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/svg-nerds/radio-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filter-input-radio:checked + label::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/svg-nerds/radio-on.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.pagination-list {
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 10px;
+}
+
+.pagination-item:last-child {
+  margin-right: 0;
+}
+
+.pagination-item a {
+  display: block;
+  padding: 15px 20px;
+
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+
+/*Map*/
+
+.map {
+  width: 100%;
+  background-position: top center;
+  background-repeat: repeat;
+  background-image:  url("img/map.jpg");
 }
