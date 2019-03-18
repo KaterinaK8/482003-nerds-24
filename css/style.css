@@ -1,12 +1,12 @@
 body {
-  min-width: : 1200px; /*минимальная????*/
+  min-width: 1200px;
   margin: 0; /*убирает  отступы внешние по экрану*/
   padding: 0;/*внутренние отступы вокруг содержимого в рамке*/
 
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;/*межстрочный интервал*/
-  font-weight: normal;/*насыщенность/жирность шрифта*/
+  font-weight: 400;/*насыщенность/жирность шрифта*/
   color: #000000;/*black*//*цвет текста*/
   text-transform: none;/*регистр */
 
@@ -22,9 +22,6 @@ img {
   height: auto;
 }
 
-ul {
-  list-style: none;
-}
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -47,9 +44,7 @@ input[type="radio"].visually-hidden {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin).*/
-
-  outline: 1px solid green; /*временно*/
+  box-sizing: border-box;
 }
 
 .button {
@@ -75,9 +70,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   font-weight: 500;
 
-  background-color: #eeeeee;/*grey*/
-
-  outline: 1px solid green; /*временно*/
+  background-color: #eeeeee;
 }
 
 .container-header {
@@ -91,26 +84,22 @@ input[type="radio"].visually-hidden {
   width: 160px;
   height: 65px;
   margin-top: -7px;
-
-  outline: 1px solid red; /*временно*/
 }
 
 .main-navigation {
   max-width: 488px;/*для ужимания под контент*/
   margin: 0;
   padding: 0;
-
-  outline: 1px solid yellow; /*временно*/
+  margin-top: -1px;
 }
 
 .shopping-bag {
   width: 160px;
   margin: 0;
   padding: 0;
-  text-align: right;
-  /*margin-left: auto;*/
+  margin-top: -1px;
 
- outline: 1px solid blue; /*временно*/
+  text-align: right;
 }
 
 .shopping-bag-svg {
@@ -131,11 +120,10 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 0 0;
 
-  /*background-color: #ff0000;*/
 }
 
 .site-navigation {
-  list-style: none;/*убирает маркеры в списке*/
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -148,8 +136,6 @@ input[type="radio"].visually-hidden {
 
   display: block;
   box-sizing: border-box;;
-
-  outline: 1px solid yellow; /*временно*/
 }
 
 .site-navigation a {
@@ -190,7 +176,7 @@ input[type="radio"].visually-hidden {
 
   background-color: #eeeeee;
 
-  margin-bottom: 80px;
+  margin-bottom: 79px;
 }
 
 .slider-controls {
@@ -296,7 +282,7 @@ input[type="radio"].visually-hidden {
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 25px;
 
   font-size: 55px;
   line-height: 55px;
@@ -306,7 +292,7 @@ input[type="radio"].visually-hidden {
 .slider-item p {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 }
 
 .slider-item-button {
@@ -327,7 +313,7 @@ input[type="radio"].visually-hidden {
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
-/*Slider*/
+/* End Slider*/
 
 /*Main*/
 
@@ -344,8 +330,6 @@ input[type="radio"].visually-hidden {
   width: 1100px;
 
   padding-bottom: 80px;
-
-  outline: 1px solid blue; /*временно*/
 }
 
 .services-item {
@@ -353,7 +337,6 @@ input[type="radio"].visually-hidden {
   line-height: 24px;
 
   width: 300px;
-  outline: 1px solid pink; /*временно*/
 }
 
 .services-img {
@@ -363,19 +346,16 @@ input[type="radio"].visually-hidden {
 .services h3 {
   font-size: 24px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 15px;
   margin:0;
-
-  outline: 1px solid pink; /*временно*/
 }
 
 .services-item-text {
   padding-right: 20px;
   margin-bottom: 31px;
-
-  outline: 1px solid green; /*временно*/
+  margin-top: 15px;
 }
 
 .button-services {
@@ -428,19 +408,14 @@ input[type="radio"].visually-hidden {
 
 .aboutus {
   display: flex;
-  /*flex-wrap: wrap;*/
   justify-content: space-between;
-  padding-bottom: 72px;
-
-  outline: 1px solid red; /*временно*/
+  padding-bottom: 58px;
 }
 
 .aboutus-text {
   width: 660px;
 
-  padding-top: 80px;
-
-  outline: 1px solid red; /*временно*/
+  padding-top: 75px;
 }
 
 .aboutus-text h2 {
@@ -448,36 +423,29 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
   font-weight: 500;
   margin: 0;
-  margin-bottom: 31px;
-
-  outline: 1px solid red; /*временно*/
+  margin-bottom: 35px;
 }
 
 .aboutus-text p {
   margin: 0;
-  margin-bottom: 42px;
-
-  outline: 1px solid red; /*временно*/
+  margin-bottom: 39px;
 }
 
 .aboutus-text h3 {
   margin: 0;
-  margin-bottom: 30px;
-
+  margin-bottom: 23px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-
-  outline: 1px solid red; /*временно*/
 }
 
-.aboutus ul {
-
+.aboutus-text ul {
+  list-style: none;
 }
 
 .aboutus li {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  margin-bottom: 24px;
+  margin-top: : 25px;
 
   position: relative;
 }
@@ -504,28 +472,31 @@ input[type="radio"].visually-hidden {
 
   padding-top: 40px;
   text-align: right;
-
-  outline: 1px solid red; /*временно*/
 }
 
 .logo-table h3 {
-  padding-right: 17px;
-  margin-bottom: 46px;
+  padding-right: 15px;
+  margin-bottom: 58px;
+  margin-top: 30px;
+
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
-.logo-table table {
+.logo-table .nerds-table {
   text-align: left;
 }
 
-table td {
-  padding-right: 24px;
+.nerds-table td {
+  padding-right: 19px;
+  line-height: 18px;
 }
 
 .percents td{
   font-size: 45px;
-  line-height: 10,06px;
-  font-weight: bold;
-  padding-bottom: 25px;
+  line-height: 10.06px;
+  font-weight: 700;
+  padding-bottom: 36px;
 }
 
 sup {
@@ -540,15 +511,14 @@ sup {
   justify-content: space-around;
   align-items: center;
 
-  padding-bottom: 44px;
+  padding-bottom: 38px;
   padding-top: 46px;
-
-  outline: 1px solid red; /*временно*/
+  margin-bottom: 80px;
 }
 
 .project-logo img {
-opacity: 0.2;
-  }
+  opacity: 0.2;
+}
 
 .project-logo img:hover,
 .project-logo img:focus {
@@ -563,37 +533,58 @@ opacity: 0.2;
   width: 100%;
   margin: 0;
   padding: 0;
+  margin-bottom: 66px;
+  min-height: 416px;
 
-  outline: 1px solid green; /*временно*/
+  position: relative;
+}
+
+.map-wrapper {
+  width: 100%;
+  min-height: 416px;
+  border: none;
+}
+
+.container-map {
+  position:absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 .adress {
   box-sizing: border-box;
+  position:relative;
+  left:0;
+  top: 0;
 
   width: 320px;
-  margin-left:140px;
   background-color: #ffffff;
 
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 47px;
-  padding-top: 47px;
+  margin-top: 55px;
+  margin-bottom: 55px;
+  padding: 50px;
+  padding-top: 29px;
 
-  outline: 1px solid red; /*временно*/
 }
 
 .adress .name {
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  margin-bottom:28px;
-}
+  font-size: 18px;
+  line-height: 30px;
 
-.adress .nerds-adress {
   margin-bottom: 20px;
 }
 
+.adress .nerds-adress {
+  margin: 0;
+  margin-bottom: 6px;
+}
+
 .adress .tel {
-  margin-bottom: 40px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .write-us {
@@ -604,7 +595,7 @@ opacity: 0.2;
 }
 
 .map-popup {
-  display: none;*
+  display: none;
 
   position: fixed;
 
@@ -631,7 +622,7 @@ opacity: 0.2;
 
   font-size: 50px;
   line-height: 50px;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .content-form {
@@ -645,7 +636,7 @@ div.feedback-text {
 }
 
 .content-form label {
-  font-weight: bold;
+  font-weight: 700;
   line-height: 18px;
 }
 
@@ -673,10 +664,6 @@ div.feedback-text {
   color: #000000;
   opacity: 1;
 }
-
-/*.content-form input: {
-
-}*/
 
 .feedback-text {
   margin-bottom: 47px;
@@ -726,24 +713,17 @@ div.feedback-text {
   width: 100%;
   padding: 0;
   margin: 0;
-
-  outline: 1px solid pink; /*временно*/
 }
 
 .container-footer {
   display: flex;
-
-  outline: 1px solid black; /*временно*/
 }
 
 .footer-social {
-  padding-top: 69px;
   padding-bottom: 78px;
 
   width: 260px;
   margin: 0;
-
-  outline: 1px solid green; /*временно*/
 }
 
 .footer-social-buttons {
@@ -775,7 +755,7 @@ div.feedback-text {
 }
 
 .social-button svg {
-margin: auto; /*почему для выравнивания???*/
+  margin: auto;
 }
 
 .social-button svg:active {
@@ -787,30 +767,29 @@ margin: auto; /*почему для выравнивания???*/
   margin: 0;
   padding: 0;
   margin-left: 140px;
-  outline: 1px solid red; /*временно*/
+  padding-top: 8px;
 }
 
 .make-friends {
   margin: 0;
-  padding-top:82px;
   font-size: 36px;
-  line-height: 36px;/*межстрочный интервал*/
-  font-weight: bold;/*насыщенность/жирность шрифта*/
+  line-height: 36px;
+  font-weight: 700;
 }
 
 .discount {
-  line-height: 22px;/*межстрочный интервал*/
+  line-height: 22px;
   margin: 0;
-  padding-top: 15px;
+  padding-top: 11px;
 }
 
 /*CATALOG*/
 
 .h1-main {
   font-size: 55px;
-  line-height: 55px;/*межстрочный интервал*/
-  font-weight: 500;/*насыщенность/жирность шрифта*/
-  background-color: #eeeeee;/*grey*/
+  line-height: 55px;
+  font-weight: 500;
+  background-color: #eeeeee;
   text-transform: none;
   text-align: center;
   width: 100%;
@@ -819,8 +798,6 @@ margin: auto; /*почему для выравнивания???*/
   margin: 0;
   margin-bottom: 110px;
   margin-top: 65px;
-
-  outline: 1px solid blue; /*временно*/
 }
 
 .main-navigation .current-page {
@@ -835,22 +812,21 @@ margin: auto; /*почему для выравнивания???*/
 
 .filter {
   width: 260px;
-  outline: 1px solid orange; /*временно*/
 }
 
 .catalog {
   display: flex;
-  flex-wrap: wrap;/*перенос на новую строку*/
+  flex-wrap: wrap;
 
   padding: 0;
   margin: 0;
+  margin-bottom:30px;
 
   list-style: none;
 }
 
 .catalog-content {
   width: 760px;
-  outline: 1px solid purple; /*временно*/
 }
 
 .catalog-nerds {
@@ -864,8 +840,6 @@ margin: auto; /*почему для выравнивания???*/
   line-height: 0;
 
   position:relative;
-
-  outline: 1px solid blue; /*временно*/
 }
 
 .catalog-item:nth-child(2n) {
@@ -912,7 +886,7 @@ margin: auto; /*почему для выравнивания???*/
   font-size: 18px;
   line-height: 30px;
   margin: 29px 0 15px 0;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -940,10 +914,10 @@ margin: auto; /*почему для выравнивания???*/
 /*Filter*/
 
 .filter-form {
-  padding-top: 60px;
+  padding-top: 55px;
 }
 
-fieldset ul {
+.filter-item ul {
   list-style: none;
 }
 
@@ -957,7 +931,7 @@ fieldset ul {
 .mesh-features {
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -971,7 +945,7 @@ fieldset ul {
 
   height: 41px;
   margin-bottom: 15px;
-  padding-top: 39px;
+  padding-top: 37px;
   padding-right: 20px;
   padding-left: 20px;
 
@@ -995,7 +969,7 @@ fieldset ul {
 
 .range-controls .toggle {
   position: absolute;
-  top: 31px;
+  top: 28px;
   left: 0;
 
   width: 4px;
@@ -1031,7 +1005,7 @@ fieldset ul {
 
 .price-controls input {
   width: 60px;
-  padding: 8px 10px;
+  padding: 10px 10px;
   margin-left: 10px;
 
   font-family: Roboto, Arial, sans-serif;
@@ -1050,7 +1024,7 @@ fieldset ul {
 
 .filter .filter-option {
   font-size: 16px;
-  height-weight: 20px;
+  line-height: 20px;
 }
 
 .filter-input:disabled + label {
@@ -1062,7 +1036,7 @@ fieldset ul {
 }
 
 .filter-kindofmesh {
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 
 .filter-mesh-features {
@@ -1070,6 +1044,8 @@ fieldset ul {
 }
 
 .filter ul {
+  list-style: none;
+
   padding: 0;
   margin: 0;
 }
@@ -1077,8 +1053,6 @@ fieldset ul {
 .filter-option {
   margin-bottom: 20px;
   padding-left: 37px;
-
-  outline: 1px solid green; /*временно*/
 }
 
 .filter-option label {
@@ -1169,6 +1143,7 @@ fieldset ul {
 .pagination-list {
   padding: 0;
   margin: 0;
+  margin-bottom: 58px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1222,7 +1197,7 @@ fieldset ul {
 .sort {
   display: flex;
 
-  padding-top: 60px;
+  padding-top: 51px;
 }
 
 .sort p {
@@ -1230,7 +1205,7 @@ fieldset ul {
 
   font-size: 18px;
   line-height: 30px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
 
   margin:0;
@@ -1245,10 +1220,14 @@ fieldset ul {
 }
 
 .how-sort ul {
+  list-style: none;
+
   margin: 0;
+  padding-top: 5px;
 }
 
 .how-sort-1 {
+
   display: flex;
   justify-content: space-between;
 
