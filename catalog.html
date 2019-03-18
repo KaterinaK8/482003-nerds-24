@@ -268,11 +268,14 @@
     </main>
     <section class="map">
       <h2 class="visually-hidden">Адрес</h2>
-      <div class="adress">
-        <p class="name">NЁRDS DESIGN STUDIO</p>
-        <p class="nerds-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
-        <p class="tel">тел. +7 (812) 275-75-75</p>
-        <a class="button write-us" href="#">Напишите нам</a>
+      <div class="map-wrapper" id="map"></div>
+      <div class="container container-map">
+        <div class="adress">
+          <p class="name">NЁRDS DESIGN STUDIO</p>
+          <p class="nerds-adress">191186, Санкт-Петербург,<br> ул. Б. Конюшенная, д. 19/8</p>
+          <p class="tel">тел. +7 (812) 275-75-75</p>
+          <a class="button write-us" href="#">Напишите нам</a>
+        </div>
       </div>
     </section>
     <footer class="main-footer">
@@ -328,11 +331,11 @@
              name="feedback-text" placeholder="В свободной форме">
           </div>
         </div>
-        <button class="button" type="submit">
-          Отправить
-        </button>
-      </form>
-      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
-    </div>
-  </body>
+      </button>
+    </form>
+    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+  </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
