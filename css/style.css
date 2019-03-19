@@ -139,7 +139,11 @@ input[type="radio"].visually-hidden {
 }
 
 .site-navigation a {
-  padding: 20px 23px;
+  box-sizing: border-box;
+  padding: 20px 0;
+  margin: 0 23px;
+  margin-bottom: 17px;
+  padding-bottom: 3px;
 }
 
 .shopping-bag a {
@@ -327,8 +331,8 @@ input[type="radio"].visually-hidden {
 .services {
   display: flex;
   justify-content: space-between;
-  width: 1100px;
 
+  padding-right: 60px;
   padding-bottom: 80px;
 }
 
@@ -373,9 +377,10 @@ input[type="radio"].visually-hidden {
   background-color: #e74246;
 }
 
-.button-red:active { /*??????Тут еще тень или что?????????*/
+.button-red:active {
   background-color: #d7373b;
-  opacity: 0.3; /*как сделать только текст полупрозрачным?*/
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button-green {
@@ -389,7 +394,8 @@ input[type="radio"].visually-hidden {
 
 .button-green:active {
   background-color: #00aa62;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .button-orange {
@@ -403,7 +409,8 @@ input[type="radio"].visually-hidden {
 
 .button-orange:active {
   background-color: #e5a722;
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 .aboutus {
@@ -441,11 +448,11 @@ input[type="radio"].visually-hidden {
 
 .aboutus-text ul {
   list-style: none;
+  padding-left: 36px;
 }
 
 .aboutus li {
   margin-bottom: 24px;
-  margin-top: : 25px;
 
   position: relative;
 }
@@ -509,11 +516,15 @@ sup {
 .projects {
   display: flex;
   justify-content: space-around;
-  align-items: center;
 
   padding-bottom: 38px;
   padding-top: 46px;
   margin-bottom: 80px;
+}
+
+.projects a{
+  display: flex;
+  align-items: center;
 }
 
 .project-logo img {
@@ -533,7 +544,7 @@ sup {
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 66px;
+  margin-bottom: 67px;
   min-height: 416px;
 
   position: relative;
@@ -554,7 +565,7 @@ sup {
 
 .adress {
   box-sizing: border-box;
-  position:relative;
+  position: absolute;
   left:0;
   top: 0;
 
@@ -562,9 +573,9 @@ sup {
   background-color: #ffffff;
 
   margin-top: 55px;
-  margin-bottom: 55px;
+  margin-bottom: 50px;
   padding: 50px;
-  padding-top: 29px;
+  padding-top: 30px;
 
 }
 
@@ -574,17 +585,18 @@ sup {
   font-size: 18px;
   line-height: 30px;
 
-  margin-bottom: 20px;
+  margin-bottom: 23px;
 }
 
 .adress .nerds-adress {
   margin: 0;
-  margin-bottom: 6px;
+  margin-bottom: 15px;
+  line-height: 18px;
 }
 
 .adress .tel {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
 }
 
 .write-us {
@@ -595,33 +607,33 @@ sup {
 }
 
 .map-popup {
-  display: none;
+  /*display: none;*/
 
   position: fixed;
 
   width: 960px;
 
   left: 50%;
-  bottom: 180px;
-  box-sizing: border-box;
+  bottom: 243px;
+  box-sizing: border-box;*/
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 74px;
-  padding-bottom: 85px;
+  padding-top: 67px;
+  padding-bottom: 83px;
 
   margin-left: -480px;
 
   background-color: white;
 
-  box-shadow: 20px 20px 40px 0px rgba(0, 1, 1, 0.75);
+  box-shadow:  6px 6px 15px 10px rgba(0, 1, 1, 0.25);
 }
 
 .map-popup h3 {
   margin: 0;
   margin-bottom: 50px;
 
-  font-size: 50px;
-  line-height: 50px;
+  font-size: 45px;
+  line-height: 45px;
   font-weight: 500;
 }
 
@@ -674,7 +686,7 @@ div.feedback-text {
   top: 76px;
   right: 88px;
 
-  width: 25px;
+  width: 22px;
   height: 25px;
 
   font-size: 0;
@@ -758,7 +770,7 @@ div.feedback-text {
   margin: auto;
 }
 
-.social-button svg:active {
+.social-button:active svg {
   opacity: 0.3;
 }
 
@@ -801,8 +813,7 @@ div.feedback-text {
 }
 
 .main-navigation .current-page {
-  text-decoration-line: underline;
-  text-decoration-color: #fb565a;
+  border-bottom: 2px solid #fb565a;
 }
 
 .catalog-columns {
@@ -820,7 +831,7 @@ div.feedback-text {
 
   padding: 0;
   margin: 0;
-  margin-bottom:30px;
+  margin-bottom:27px;
 
   list-style: none;
 }
@@ -830,7 +841,7 @@ div.feedback-text {
 }
 
 .catalog-nerds {
-  margin-top: 49px;
+  margin-top: 50px;
 }
 
 .catalog-item {
@@ -853,6 +864,11 @@ div.feedback-text {
 .catalog-item:hover svg,
 .catalog-item:focus svg {
   opacity: 1;
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  box-shadow:  0px 6px 15px 0px rgba(0, 1, 1, 0.25);
 }
 
 .catalog-item-image {
@@ -1036,11 +1052,11 @@ div.feedback-text {
 }
 
 .filter-kindofmesh {
-  margin-bottom: 40px;
+  margin-bottom: 26px;
 }
 
 .filter-mesh-features {
-  margin-bottom: 48px;
+  margin-bottom: 28px;
 }
 
 .filter ul {
@@ -1048,6 +1064,11 @@ div.feedback-text {
 
   padding: 0;
   margin: 0;
+  margin-top: 15px;
+}
+
+.kindofmesh ul {
+  padding-top: 14px;
 }
 
 .filter-option {
@@ -1155,8 +1176,9 @@ div.feedback-text {
   margin-right: 10px;
 }
 
-.pagination-item:last-child {
+.pagination-item:last-child a {
   margin-right: 0;
+  padding-left: 25px;
 
   width: 260px;
   box-sizing: border-box;
@@ -1169,28 +1191,30 @@ div.feedback-text {
 
 .pagination-item a{
   display: block;
-  padding: 15px 20px;
+  padding: 13px 20px;
+  padding-top: 17px;
+  border-radius: 3px;
 
   color: #000000;
 
   background-color: #eeeeee;
 }
 
-.grey-button:hover,
-.grey-button:focus {
+.pagination-item-current  a{
+  background-color: #ffffff;
+  border: 2px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.grey-button:hover a,
+.grey-button:focus a{
   background-color: #dfdfdf;
 }
 
-.grey-button:active {
+.grey-button:active a {
   background-color: #d5d5d5;
-  color: rgba(185, 185, 185, 0.3); /*прорачность не работает*/
-}
-
-.pagination-item-current {
-  background-color: #ffffff;
-
-  box-sizing: border-box;
-  border: 2px solid #dbdbdb;
+  color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
 
 /*Sort*/
@@ -1229,10 +1253,16 @@ div.feedback-text {
 .how-sort-1 {
 
   display: flex;
-  justify-content: space-between;
 
   width:280px;
+}
 
+.how-sort-1 li {
+  margin-left: 26px;
+}
+
+.how-sort-1 li:first-child {
+  margin-left: 0;
 }
 
 .how-sort-2 {
@@ -1264,14 +1294,17 @@ div.feedback-text {
 }
 
 .how-sort-2 svg {
+  fill: #a6a6a6;
   opacity: 0.2;
 }
 
 .how-sort-2 li:hover svg,
 .how-sort-2 li:focus svg {
+
   opacity:1;
 }
 
 .how-sort-2 li:active svg {
-  /*другй цвет*/
+  fill: black;
+  opacity:1;
 }
