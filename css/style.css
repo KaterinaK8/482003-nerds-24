@@ -57,6 +57,7 @@ input[type="radio"].visually-hidden {
   text-transform: uppercase;
   text-align: center;
   text-decoration: none;
+  cursor: pointer;
 
   border-radius: 3px;
   border: none;
@@ -119,7 +120,6 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/svg-nerds/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-
 }
 
 .site-navigation {
@@ -160,8 +160,7 @@ input[type="radio"].visually-hidden {
 
 .main-navigation a:active,
 .shopping-bag a:active {
-  color: #000000;
-  opacity: 0.3;
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .main-header-logo svg:hover,
@@ -515,9 +514,10 @@ sup {
 
 .projects {
   display: flex;
-  justify-content: space-around;
 
-  padding-bottom: 38px;
+  padding-left: 31px;
+  padding-right: 42px;
+  padding-bottom: 44px;
   padding-top: 46px;
   margin-bottom: 80px;
 }
@@ -525,6 +525,68 @@ sup {
 .projects a{
   display: flex;
   align-items: center;
+}
+
+.project-logo-academy {
+  margin-right: 95px;
+  margin-top: 10px;
+
+  position: relative;
+}
+
+.project-logo-academy::after {
+  content: "";
+
+  position: absolute;
+  top: 8px;
+  left: 248px;
+
+  width: 2px;
+  height: 52px;
+
+  background-color:#eeeeee;
+}
+
+.project-logo-borodinski {
+  margin-right: 103px;
+
+  position: relative;
+}
+
+.project-logo-borodinski::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 254px;
+
+  width: 2px;
+  height: 52px;
+
+  background-color:#eeeeee;
+}
+
+.project-logo-pink {
+  margin-right: 123px;
+
+  position: relative;
+}
+
+.project-logo-pink::after {
+  content: "";
+
+  position: absolute;
+  top: 18px;
+  left: 243px;
+
+  width: 2px;
+  height: 52px;
+
+  background-color:#eeeeee;
+}
+
+.project-logo-mishka {
+  margin-top: 5px;
 }
 
 .project-logo img {
@@ -576,6 +638,7 @@ sup {
   margin-bottom: 50px;
   padding: 50px;
   padding-top: 30px;
+  margin-left: 20px;
 
 }
 
@@ -607,7 +670,7 @@ sup {
 }
 
 .map-popup {
-  /*display: none;*/
+  display: none;
 
   position: fixed;
 
@@ -615,7 +678,7 @@ sup {
 
   left: 50%;
   bottom: 243px;
-  box-sizing: border-box;*/
+  box-sizing: border-box;
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 67px;
@@ -665,16 +728,38 @@ div.feedback-text {
   padding: 15px;
 
   border: 2px solid #d7dcde;
+  border-radius: 3px;
 }
 
-.content-form input:hover {
+.content-form textarea {
+  font: inherit;
+  color: rgba(0, 0, 0, 0.5);
+
+  box-sizing: border-box;
+  width: 360px;
+  padding: 15px;
+  width: 100%;
+  height: 118px;
+
+  border: 2px solid #d7dcde;
+  border-radius: 3px;
+}
+
+.content-form input:hover,
+.content-form textarea:hover {
   border-color: #b4b9bb;
 }
 
-.content-form input:focus {
+.content-form input:focus,
+.content-form textarea:focus {
   border-color: #000000;
   color: #000000;
   opacity: 1;
+}
+
+.content-form input:invalid {
+  border-color: #e74246;
+  color: #e74246;
 }
 
 .feedback-text {
