@@ -16,3 +16,31 @@ function init () {
     });
 
 }
+
+  var link = document.querySelector(".write-us");
+
+  var popup = document.querySelector(".map-popup");
+  var close = popup.querySelector(".map-popup-close");
+
+  var form = popup.querySelector("form");
+  var login = popup.querySelector("[name=feedback-login]");
+
+  link.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.add("map-popup-show");
+    login.focus();
+  });
+
+  close.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popup.classList.remove("map-popup-show");
+  });
+
+  form.addEventListener("submit", function (evt) {
+    if (!login.value || !password.value) {
+    evt.preventDefault();
+    console.log("Нужно ввести имя и пароль");
+  }else {
+  localStorage.setItem("login", login.value);
+  }
+  });
