@@ -1,16 +1,16 @@
 body {
   min-width: 1200px;
-  margin: 0; /*убирает  отступы внешние по экрану*/
-  padding: 0;/*внутренние отступы вокруг содержимого в рамке*/
+  margin: 0;
+  padding: 0;
 
   font-family: "Roboto", Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;/*межстрочный интервал*/
-  font-weight: 400;/*насыщенность/жирность шрифта*/
-  color: #000000;/*black*//*цвет текста*/
-  text-transform: none;/*регистр */
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  text-transform: none;
 
-  background-color: #ffffff;/*white*/
+  background-color: #ffffff;
 }
 
 a {
@@ -63,6 +63,8 @@ input[type="radio"].visually-hidden {
   border: none;
 }
 
+/*main header*/
+
 .main-header {
   box-sizing: border-box;
   font-size: 16px;
@@ -88,7 +90,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-navigation {
-  max-width: 488px;/*для ужимания под контент*/
+  max-width: 488px;
   margin: 0;
   padding: 0;
   margin-top: -1px;
@@ -171,6 +173,8 @@ input[type="radio"].visually-hidden {
 .main-header-logo svg:active {
   opacity: 0.3;
 }
+
+/*end main header*/
 
 /*Slider*/
 
@@ -602,6 +606,10 @@ sup {
   opacity: 0.1;
 }
 
+/*end main header*/
+
+/*map*/
+
 .map {
   width: 100%;
   margin: 0;
@@ -639,7 +647,6 @@ sup {
   padding: 50px;
   padding-top: 30px;
   margin-left: 20px;
-
 }
 
 .adress .name {
@@ -669,31 +676,54 @@ sup {
   color: #ffffff;
 }
 
+/*pop up*/
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .map-popup {
   display: none;
-
   position: fixed;
+  z-index: 100;
 
   width: 960px;
-
   left: 50%;
-  bottom: 243px;
+  top: 50%;
   box-sizing: border-box;
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 67px;
   padding-bottom: 83px;
-
   margin-left: -480px;
+  margin-top: -375px;
 
   background-color: white;
-
   box-shadow:  6px 6px 15px 10px rgba(0, 1, 1, 0.25);
+}
+
+.map-popup-show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .map-popup h3 {
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
 
   font-size: 45px;
   line-height: 45px;
@@ -725,7 +755,8 @@ div.feedback-text {
 
   box-sizing: border-box;
   width: 360px;
-  padding: 15px;
+  padding: 11px;
+  margin-bottom: 18px;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
@@ -763,25 +794,21 @@ div.feedback-text {
 }
 
 .feedback-text {
-  margin-bottom: 47px;
+  margin-bottom: 40px;
 }
 
-.map-popup svg {
+.map-popup-close {
   position: absolute;
   top: 76px;
-  right: 88px;
+  right: 92px;
 
   width: 22px;
   height: 25px;
 
   font-size: 0;
-
   border: 0;
-
   background-color: white;
-
   cursor: pointer;
-
   opacity: 0.3;
 }
 
@@ -803,6 +830,8 @@ div.feedback-text {
   color: white;
   background-color: #fb565a;
 }
+
+/*ena pop up*/
 
 /*Main footer*/
 
@@ -880,7 +909,11 @@ div.feedback-text {
   padding-top: 11px;
 }
 
-/*CATALOG*/
+/*end main footer*/
+
+/*catalog.html*/
+
+/*main*/
 
 .h1-main {
   font-size: 55px;
@@ -1012,6 +1045,8 @@ div.feedback-text {
   background-color: #d7373b;
 }
 
+/*end catalog*/
+
 /*Filter*/
 
 .filter-form {
@@ -1051,7 +1086,6 @@ div.feedback-text {
   padding-left: 20px;
 
   background-color: #f1f1f1;
-
   border-radius: 5px;
 }
 
@@ -1246,6 +1280,10 @@ div.feedback-text {
   color: #000000;
 }
 
+/*end filter*/
+
+/*pagination*/
+
 .pagination-list {
   padding: 0;
   margin: 0;
@@ -1278,11 +1316,12 @@ div.feedback-text {
   display: block;
   padding: 13px 20px;
   padding-top: 17px;
-  border-radius: 3px;
 
   color: #000000;
 
   background-color: #eeeeee;
+  border: 2px solid transparent;
+  border-radius: 3px;
 }
 
 .pagination-item-current  a{
@@ -1301,6 +1340,8 @@ div.feedback-text {
   color: rgba(0, 0, 0, 0.3);
   box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
 }
+
+/*end pagination*/
 
 /*Sort*/
 .sort {
@@ -1366,12 +1407,12 @@ div.feedback-text {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.how-sort-1 li:hover a,
-.how-sort-1 li:hover a {
+.sort-up-down:hover a,
+.sort-up-down:hover a {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.how-sort-1 li:active a{
+.sort-up-down:active a{
   color: rgba(0, 0, 0, 1);
 }
 .current-sort a {
@@ -1383,13 +1424,13 @@ div.feedback-text {
   opacity: 0.2;
 }
 
-.how-sort-2 li:hover svg,
-.how-sort-2 li:focus svg {
-
+.sort-down-up:hover svg,
+.sort-down-up:focus svg {
   opacity:1;
 }
 
-.how-sort-2 li:active svg {
+.sort-down-up:active svg {
   fill: black;
   opacity:1;
 }
+/*end sort*/

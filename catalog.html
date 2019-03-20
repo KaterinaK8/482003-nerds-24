@@ -34,9 +34,6 @@
             </ul>
           </nav>
           <div class="shopping-bag">
-            <!--
-            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15"><circle fill="#a6a6a6" cx="4.5" cy="13.5" r="1.5"/><circle fill="#a6a6a6" cx="12.5" cy="13.5" r="1.5"/><path fill="#a6a6a6" d="M15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951z"/></svg>
-            -->
             <a class="shopping-bag-svg" href="shopping-bag.html">Корзина</a>
           </div>
         <h1 class="h1-main">Магазин готовых шаблонов</h1>
@@ -337,10 +334,41 @@
             Отправить
           </button>
         </form>
-        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+        <button class="map-popup-close" type="submit">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><path fill="#FB565A" d="M13.328 10.5l7.371-7.371a1.003 1.003 0 0 0 0-1.414L19.285.3a1.003 1.003 0 0 0-1.414 0L10.5 7.672 3.129.301a1.003 1.003 0 0 0-1.414 0L.301 1.715a1.003 1.003 0 0 0 0 1.414L7.672 10.5.301 17.871a1.003 1.003 0 0 0 0 1.414l1.415 1.414a1.003 1.003 0 0 0 1.414 0l7.371-7.371 7.371 7.371a1.003 1.003 0 0 0 1.414 0l1.414-1.414a1.003 1.003 0 0 0 0-1.414L13.328 10.5z"/></svg>
+        </button>
       </div>
     </div>
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
-  <script src="js/main.js"></script>
-</body>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+    <script src="js/main.js"></script>
+    <script>
+      var link = document.querySelector(".write-us");
+
+      var popup = document.querySelector(".map-popup");
+      var close = popup.querySelector(".map-popup-close");
+
+      var form = popup.querySelector("form");
+      var login = popup.querySelector("[name=feedback-login]");
+
+      link.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.add("map-popup-show");
+        login.focus();
+      });
+
+      close.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        popup.classList.remove("map-popup-show");
+      });
+
+      form.addEventListener("submit", function (evt) {
+        if (!login.value || !password.value) {
+        evt.preventDefault();
+        console.log("Нужно ввести имя и пароль");
+      }else {
+      localStorage.setItem("login", login.value);
+      }
+      });
+    </script>
+  </body>
 </html>
