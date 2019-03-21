@@ -93,7 +93,8 @@ input[type="radio"].visually-hidden {
   max-width: 488px;
   margin: 0;
   padding: 0;
-  margin-top: -1px;
+  margin-top: -2px;
+  margin-left: 3px;
 }
 
 .shopping-bag {
@@ -144,8 +145,8 @@ input[type="radio"].visually-hidden {
   box-sizing: border-box;
   padding: 20px 0;
   margin: 0 23px;
-  margin-bottom: 17px;
-  padding-bottom: 3px;
+  margin-bottom: 16px;
+  padding-bottom: 4px;
 }
 
 .shopping-bag a {
@@ -183,13 +184,13 @@ input[type="radio"].visually-hidden {
 
   background-color: #eeeeee;
 
-  margin-bottom: 79px;
+  margin-bottom: 80px;
 }
 
 .slider-controls {
   position: absolute;
   left: 50%;
-  bottom: 104px;
+  bottom: 103px;
   z-index: 100;
 
   width: 160px;
@@ -216,8 +217,8 @@ input[type="radio"].visually-hidden {
   content: "";
 
   position: absolute;
-  top: 8px;
-  left: 8px;
+  top: 5px;
+  left: 10px;
   z-index: 1;
 
   width: 18px;
@@ -280,7 +281,7 @@ input[type="radio"].visually-hidden {
   z-index: 2;
   width: 4px;
   height: 4px;
-  margin: -4px;
+  margin: -6px;
   background-color: inherit;
   border: 2px solid #c1c1c1;
   border-radius: 50%;
@@ -289,7 +290,7 @@ input[type="radio"].visually-hidden {
 .slider-item h3 {
   max-width: 600px;
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 
   font-size: 55px;
   line-height: 55px;
@@ -299,11 +300,13 @@ input[type="radio"].visually-hidden {
 .slider-item p {
   max-width: 430px;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
+  margin-left: 1px;
 }
 
 .slider-item-button {
   width: 240px;
+  padding-bottom: 15px;
 
   color: #ffffff;
   background-color: #fb565a;
@@ -361,7 +364,7 @@ input[type="radio"].visually-hidden {
 
 .services-item-text {
   padding-right: 20px;
-  margin-bottom: 31px;
+  margin-bottom: 32px;
   margin-top: 15px;
 }
 
@@ -419,7 +422,7 @@ input[type="radio"].visually-hidden {
 .aboutus {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 58px;
+  padding-bottom: 59px;
 }
 
 .aboutus-text {
@@ -433,17 +436,17 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
   font-weight: 500;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 33px;
 }
 
 .aboutus-text p {
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 40px;
 }
 
 .aboutus-text h3 {
   margin: 0;
-  margin-bottom: 23px;
+  margin-bottom: 25px;
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
@@ -487,7 +490,7 @@ input[type="radio"].visually-hidden {
 .logo-table h3 {
   padding-right: 15px;
   margin-bottom: 58px;
-  margin-top: 30px;
+  margin-top: 29px;
 
   text-transform: uppercase;
   font-size: 16px;
@@ -532,7 +535,7 @@ sup {
 }
 
 .project-logo-academy {
-  margin-right: 95px;
+  margin-right: 96px;
   margin-top: 10px;
 
   position: relative;
@@ -614,7 +617,7 @@ sup {
   width: 100%;
   margin: 0;
   padding: 0;
-  margin-bottom: 67px;
+  margin-bottom: 68px;
   min-height: 416px;
 
   position: relative;
@@ -646,6 +649,7 @@ sup {
   margin-bottom: 50px;
   padding: 50px;
   padding-top: 30px;
+  padding-bottom: 47px;
   margin-left: 20px;
 }
 
@@ -662,15 +666,18 @@ sup {
   margin: 0;
   margin-bottom: 15px;
   line-height: 18px;
+  margin-left: 2px;
 }
 
 .adress .tel {
   margin: 0;
   margin-bottom: 35px;
+  margin-left: 2px;
 }
 
 .write-us {
   width: 220px;
+  padding-bottom: 15px;
 
   background-color: #fb565a;
   color: #ffffff;
@@ -723,7 +730,7 @@ sup {
 
 .map-popup h3 {
   margin: 0;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
 
   font-size: 45px;
   line-height: 45px;
@@ -743,10 +750,11 @@ div.feedback-text {
 .content-form label {
   font-weight: 700;
   line-height: 18px;
-}
 
-.feedback p {
+  width: 360px;
+  display: block;
   margin-bottom: 10px;
+
 }
 
 .content-form input[type="text"] {
@@ -756,7 +764,7 @@ div.feedback-text {
   box-sizing: border-box;
   width: 360px;
   padding: 11px;
-  margin-bottom: 18px;
+  margin-bottom: 34px;
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
@@ -774,6 +782,8 @@ div.feedback-text {
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
+
+  resize: vertical;
 }
 
 .content-form input:hover,
@@ -809,6 +819,9 @@ div.feedback-text {
   border: 0;
   background-color: white;
   cursor: pointer;
+}
+
+.map-popup-close svg {
   opacity: 0.3;
 }
 
@@ -893,7 +906,7 @@ div.feedback-text {
   margin: 0;
   padding: 0;
   margin-left: 140px;
-  padding-top: 8px;
+  padding-top: 7px;
 }
 
 .make-friends {
@@ -906,7 +919,7 @@ div.feedback-text {
 .discount {
   line-height: 22px;
   margin: 0;
-  padding-top: 11px;
+  padding-top: 10px;
 }
 
 /*end main footer*/
@@ -928,6 +941,7 @@ div.feedback-text {
   margin: 0;
   margin-bottom: 110px;
   margin-top: 65px;
+  margin-left: -1px;
 }
 
 .main-navigation .current-page {
@@ -949,7 +963,7 @@ div.feedback-text {
 
   padding: 0;
   margin: 0;
-  margin-bottom:27px;
+  margin-bottom:29px;
 
   list-style: none;
 }
@@ -959,7 +973,7 @@ div.feedback-text {
 }
 
 .catalog-nerds {
-  margin-top: 50px;
+  margin-top: 51px;
 }
 
 .catalog-item {
@@ -1010,6 +1024,7 @@ div.feedback-text {
 .catalog-item-info {
   width: 240px;
   margin: 0 auto;
+  padding-left: 2px;
   text-align: center;
   box-sizing: border-box;
   height: 231px;
@@ -1019,14 +1034,18 @@ div.feedback-text {
   color: black;
   font-size: 18px;
   line-height: 30px;
-  margin: 29px 0 15px 0;
+  margin: 27px 0 14px -5px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+.catalog-item-title a{
+  color: #000000;
+}
+
 .catalog-item-desc {
-  margin-bottom: 20px;
-  line-height: normal;
+  margin-bottom: 30px;
+  line-height: 18px;
   color: #6f6f6f;
 }
 
@@ -1175,7 +1194,7 @@ div.feedback-text {
 }
 
 .filter-mesh-features {
-  margin-bottom: 28px;
+  margin-bottom: 29px;
 }
 
 .filter ul {
@@ -1287,7 +1306,7 @@ div.feedback-text {
 .pagination-list {
   padding: 0;
   margin: 0;
-  margin-bottom: 58px;
+  margin-bottom: 59px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1296,12 +1315,12 @@ div.feedback-text {
 }
 
 .pagination-item {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .pagination-item:last-child a {
   margin-right: 0;
-  padding-left: 25px;
+  padding-left: 20px;
 
   width: 260px;
   box-sizing: border-box;
@@ -1315,7 +1334,7 @@ div.feedback-text {
 .pagination-item a{
   display: block;
   padding: 13px 20px;
-  padding-top: 17px;
+  padding-top: 16px;
 
   color: #000000;
 
@@ -1422,6 +1441,11 @@ div.feedback-text {
 .how-sort-2 svg {
   fill: #a6a6a6;
   opacity: 0.2;
+}
+
+.current-sort svg {
+  fill: black;
+  opacity: 1;
 }
 
 .sort-down-up:hover svg,

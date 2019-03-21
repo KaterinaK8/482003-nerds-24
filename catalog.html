@@ -149,7 +149,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">Sedona</p>
+                  <p class="catalog-item-title">
+                    <a href="#">Sedona</a>
+                  </p>
                   <p class="catalog-item-desc">Информационный сайт<br>для туристов</p>
                   <a class="button" href="#">9 900 руб.</a>
                 </div>
@@ -167,7 +169,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">Pink App</p>
+                  <p class="catalog-item-title">
+                    <a href="#">Pink App</a>
+                  </p>
                   <p class="catalog-item-desc">Продуктовый лендинг<br>приложение для iOS и Android</p>
                   <a class="button" href="#">9 900 руб.</a>
                 </div>
@@ -185,7 +189,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">Barbershop</p>
+                  <p class="catalog-item-title">
+                    <a href="#">Barbershop</a>
+                  </p>
                   <p class="catalog-item-desc">Сайт салона красоты.<br>Для мужчин, да.</p>
                   <a class="button" href="#">9 900 руб.</a>
               </div>
@@ -203,7 +209,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">Mishka</p>
+                  <p class="catalog-item-title">
+                    <a href="#">Mishka</a>
+                  </p>
                   <p class="catalog-item-desc">Интернет-магазин<br>вязаных игрушек</p>
                   <a class="button" href="#">9 900 руб.</a>
                </div>
@@ -221,7 +229,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">A plus</p>
+                  <p class="catalog-item-title">
+                    <a href="#">A plus</a>
+                  </p>
                   <p class="catalog-item-desc">Лендинг курсов повышения<br>квалификации</p>
                   <a class="button" href="#">9 900 руб.</a>
                </div>
@@ -239,7 +249,9 @@
               </a>
               <div class="catalog-item-pop-up">
                 <div class="catalog-item-info">
-                  <p class="catalog-item-title">Кваст</p>
+                  <p class="catalog-item-title">
+                    <a href="#">Кваст</a>
+                  </p>
                   <p class="catalog-item-desc">Промо-сайт производителя<br>крафтового кваса</p>
                   <a class="button" href="#">9 900 руб.</a>
                 </div>
@@ -315,17 +327,17 @@
         <form class="feedback" method="post">
           <div class="content-form">
             <div>
-              <label for="feedback-login"><p>Ваше имя:</p></label>
+              <label for="feedback-login">Ваше имя:</label>
               <input id="feedback-login" type="text"
                name="feedback-login" placeholder="Имя Фамилия">
             </div>
             <div>
-              <label for="feedback-email"><p>Ваш e-mail:</p></label>
+              <label for="feedback-email">Ваш e-mail:</label>
               <input id="feedback-email" type="text"
                name="feedback-email" placeholder="email@example.com">
             </div>
             <div class="feedback-text">
-              <label for="feedback-text"><p>Текст письма:</p></label>
+              <label for="feedback-text">Текст письма:</label>
                <textarea id="feedback-text" name="feedback-text" placeholder="В свободной форме"></textarea>
             </div>
           </div>
@@ -340,34 +352,5 @@
     </div>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
     <script src="js/main.js"></script>
-    <script>
-      var link = document.querySelector(".write-us");
-
-      var popup = document.querySelector(".map-popup");
-      var close = popup.querySelector(".map-popup-close");
-
-      var form = popup.querySelector("form");
-      var login = popup.querySelector("[name=feedback-login]");
-
-      link.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("map-popup-show");
-        login.focus();
-      });
-
-      close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("map-popup-show");
-      });
-
-      form.addEventListener("submit", function (evt) {
-        if (!login.value || !password.value) {
-        evt.preventDefault();
-        console.log("Нужно ввести имя и пароль");
-      }else {
-      localStorage.setItem("login", login.value);
-      }
-      });
-    </script>
   </body>
 </html>
