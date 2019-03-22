@@ -1040,11 +1040,11 @@ div.feedback-text {
 
 .catalog-item-pop-up {
     position: absolute;
-    top: 385px;
-    height: 231px;
     width: 360px;
     background-color: #efefef;
     display: none;
+    bottom: 0;
+    padding-bottom: 43px;
 }
 
 .catalog-item:hover .catalog-item-pop-up,
@@ -1059,7 +1059,6 @@ div.feedback-text {
     text-align: center;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    height: 231px;
 }
 
 .catalog-item-title {
