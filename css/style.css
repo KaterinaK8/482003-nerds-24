@@ -46,7 +46,7 @@ input[type="radio"].visually-hidden {
 
 .button {
     display: inline-block;
-    vertical-align:baseline;
+    vertical-align: baseline;
     padding: 17px 0;
     font-size: 16px;
     line-height: 18px;
@@ -1367,23 +1367,23 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-item a {
-  display: block;
-      padding: 11px 20px;
-      padding-top: 17px;
-      padding-bottom: 16px;
-      color: #000000;
-      background-color: #eeeeee;
-      border-radius: 3px;
+    display: block;
+    padding: 11px 20px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    color: #000000;
+    background-color: #eeeeee;
+    border-radius: 3px;
 }
 
 .pagination-item-current  a {
     background-color: #ffffff;
-        border: 3px solid #dbdbdb;
-        border-radius: 3px;
-        display: block;
-        padding: 11px 18px;
-        padding-top: 15px;
-        color: #000000;
+    border: 3px solid #dbdbdb;
+    border-radius: 3px;
+    display: block;
+    padding: 11px 18px;
+    padding-top: 15px;
+    color: #000000;
 }
 
 .grey-button:hover a,
@@ -1441,6 +1441,7 @@ input[type="radio"].visually-hidden {
 
 .how-sort-1 li {
     margin-left: 26px;
+    -ms-flex-negative: 0;
     flex-shrink: 0;
 }
 
@@ -1499,15 +1500,12 @@ input[type="radio"].visually-hidden {
 .sort-type:focus a,
 .sort-name:hover a,
 .sort-name:focus a {
-  color: rgba(0, 0, 0, 0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
-
 
 .sort-price:active a,
 .sort-type:active a,
 .sort-name:active a {
-  color: rgba(0, 0, 0, 1);
+    color: rgba(0, 0, 0, 1);
 }
-
-
 /*end sort*/
