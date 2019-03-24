@@ -275,7 +275,6 @@ input[type="radio"].visually-hidden {
     width: 4px;
     height: 4px;
     margin: -4px;
-    margin-left: -5px;
     background-color: inherit;
     border: 2px solid #c1c1c1;
     border-radius: 50%;
@@ -617,6 +616,7 @@ input[type="radio"].visually-hidden {
     margin-bottom: 68px;
     min-height: 416px;
     position: relative;
+    overflow: hidden;
 }
 
 .map-wrapper {
@@ -1391,7 +1391,7 @@ input[type="radio"].visually-hidden {
     background-color: #dfdfdf;
 }
 
-.grey-button:active a {
+.grey-button a:active {
     background-color: #d5d5d5;
     color: rgba(0, 0, 0, 0.3);
     -webkit-box-shadow: 0 3px rgba(0, 0, 0, 0.1) inset;
@@ -1488,8 +1488,8 @@ input[type="radio"].visually-hidden {
     opacity: 1;
 }
 
-.sort-down-up:active svg,
-.sort-up-down:active svg {
+.sort-down-up svg:active,
+.sort-up-down svg:active {
     fill: black;
     opacity: 1;
 }
@@ -1503,9 +1503,9 @@ input[type="radio"].visually-hidden {
     color: rgba(0, 0, 0, 0.6);
 }
 
-.sort-price:active a,
-.sort-type:active a,
-.sort-name:active a {
+.sort-price a:active,
+.sort-type a:active,
+.sort-name a:active {
     color: rgba(0, 0, 0, 1);
 }
 /*end sort*/
